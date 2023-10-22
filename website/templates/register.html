@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock title %}
+{% block form %}
+<div class=" bg-light shadow card w-30 mt-3 p-3 m-auto">
+<form method="POST" class=" py-2 px-3">
+    <h3 class=" text-center mt-0 mb-3">Register Account</h3>
+    <div class=" mb-3 d-flex justify-content-evenly">
+        <div>
+            <input type="radio" name="type" id="student" value="student" required>
+            <label for="student">Student</label>
+        </div>
+        <div>
+            <input type="radio" name="type" id="tutor" value="tutor" required>
+            <label for="tutor">Tutor</label>
+        </div>
+    </div>
+    <div class=" mb-3">
+        <input type="email" class=" form-control" name="email" id="floatingInput" placeholder="Email Address" required>
+    </div>
+    <div class="  mb-3">
+        <input type="password" class=" form-control" placeholder="Password" name="password1" id="password1" required>
+    </div>
+    <div class="  mb-3">
+        <input type="password" class=" form-control" placeholder="Confirm Password" name="password2" id="password2" required>
+        <div class="form-text">
+            Your password must have at least 8 characters.
+        </div>
+    </div>
+    <div class=" mb-3">
+        <input type="text" class=" form-control" placeholder="Full Name" name="name" id="name">
+    </div>
+    <div class="input-group mb-3">
+        <input type="number" min="1000" step="1000" class="form-control" placeholder="Salary per hour">
+        <span class="input-group-text">.00</span>
+        <span class="input-group-text">MMK</span>
+    </div>
+    <div class=" text-center mb-3">
+        <span class=" form-text">Already have an account? </span><a href="/login">Login</a>
+    </div>
+    <button type="submit" class=" d-block off-place m-auto btn btn-primary">Next</button>
+</form>
+</div>
+{% endblock form %}

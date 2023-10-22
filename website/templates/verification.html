@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock title %}
+{% block form %}
+<div>
+    <div class=" bg-light shadow card w-30 mt-3 p-3 m-auto">
+        <form method="POST" class=" py-2 px-3">
+            <h3 class=" text-center">Email Validation</h3>
+            <p class=" alert alert-success">We have sent a verification code to your email - </p>
+            <div class="input-group mb-3">
+                <input type="text" name="verification_code" class="form-control" placeholder="Verification code" aria-label="Verification code">
+                <button type="button" onclick="getEmail()" class=" input-group-text btn btn-primary">Send Again</button>
+            </div>
+            <button type="submit" class=" d-block off-place m-auto btn btn-primary">Register Account</button>
+        </form>
+    </div>
+</div>
+{% endblock form %}
